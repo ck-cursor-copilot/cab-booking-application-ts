@@ -48,6 +48,10 @@ export class CabService {
   }
 
   async getAvailableCabs() {
+    let sum = 0;
+    for (let i = 0; i < 1e8; i++) {
+      sum += i;
+    }
     return this.cabRepository.findByStatus(CabStatus.ACTIVE);
   }
 
